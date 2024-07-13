@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+               
+            <span class="site-heading-lower">BIBLIOTECA</span>
+        </h1>
+    </header>
+    <!-- inicio nav -->
+    <nav class="navbar navbar-expand-lg navbar-wait" style="background-color: rgb(122, 94, 10);">
+      <div class="logo">
+        <img class="icon" src="{% static 'img/logoo.png' %}" alt="Logo">
+      </div>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'inicio' %}">inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'libros' %}">libros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'autores' %}">autores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'categorias' %}">categorias</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- fin del nav-->
+
+    <hr>
+    
+    <!-- Carrusel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/animales.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Adéntrate en el fascinante mundo animal a través de libros cautivadores.</h5>
+            <p>Descubre la magia de la naturaleza y conoce a sus increíbles habitantes con una amplia selección de libros de animales.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/movil.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>¡El Bibliomóvil llega a tu comunidad!</h5>
+            <p>Un mundo de libros a tu alcance
+
+              ¿Te apasiona la lectura? ¿Te encanta sumergirte en historias fantásticas y aprender cosas nuevas?</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/economia.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Despierta tu mente y explora el mundo de la economía</h5>
+            <p>Amplía tus conocimientos, desarrolla habilidades analíticas y toma mejores decisiones financieras con la ayuda de la economía.
+
+              En nuestra biblioteca encontrarás una amplia selección de libros de economía para todos los niveles.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>    
+    
+
+    <hr>
+
+        <!-- primera row -->
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/infantil.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">¡A leer, pequeños exploradores!</h5>
+                      <p class="card-text">Viajen a mundos fantásticos con libros infantiles.
+
+                        Imaginación a volar.
+                        Palabras que crecen.
+                        Aventuras para soñar.
+                        Valores que aprender.
+                        Mundos por descubrir.
+                        ¡Visítanos y enamórate de la lectura!</p>
+                      <a href="{% url 'libros' %}" class="btn btn-primary">Adelante</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/cf.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ficcion</h5>
+                      <p class="card-text">Tu puerta de entrada a mundos infinitos
+                        Escápate de lo ordinario, abraza lo extraordinario.
+                        
+                        Sumérjase en historias cautivadoras</p>
+                      <a href="{% url 'libros' %}" class="btn btn-primary">Adelante</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/terror.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Terror</h5>
+                      <p class="card-text">Atrévete a explorar los rincones más oscuros de la imaginación
+                        Adéntrate en historias que te helarán la sangre y te mantendrán en vilo.
+                        
+                        El terror te espera </p>
+                      <a href="{% url 'libros' %}" class="btn btn-primary">Adelante</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">        
+            <div class="col-lg-12">
+                <div class="jumbotron">
+                  <img src="{% static 'img/bb.jpg' %}" >  
+                    <h1 class="display-4">¡Bienvenidos a la biblioteca!</h1>
+                    <p class="lead">
+                      
+                      Un universo de historias y conocimientos te espera
+                      
+                      ¿Eres un ávido lector en busca de aventuras emocionantes?
+                      
+                      ¿Un estudiante curioso que anhela saciar su sed de conocimiento?
+                      
+                      ¿O simplemente alguien que busca un refugio tranquilo para perderse en las páginas de un buen libro?
+                      
+                      Sea cual sea tu motivo, la biblioteca te abre sus puertas con los brazos abiertos.
+                      
+                      Aquí encontrarás un sinfín de posibilidades:
+                      
+                      Novelas que te transportarán a mundos lejanos y te harán vivir mil vidas.
+                      Libros de historia que te revelarán los secretos del pasado.
+                      Obras de ciencia que te abrirán la mente a nuevos horizontes.
+                      Poemas que te tocarán el alma y te inspirarán.
+                      Revistas y publicaciones que te mantendrán informado sobre el mundo actual.
+                      Y mucho más...
+                      No solo libros:
+                      
+                      Además de libros, también encontrarás audiolibros, películas, música y otros recursos multimedia.
+                      Contamos con espacios cómodos y acogedores para que puedas leer, estudiar o simplemente relajarte.
+                      Organizamos eventos culturales como talleres, conferencias y clubes de lectura.
+                      Nuestro personal amable y experto estará encantado de ayudarte a encontrar lo que buscas.
+                      La biblioteca es un espacio para todos:
+                      
+                      No importa tu edad, tus intereses o tu nivel educativo, aquí encontrarás algo para ti.
+                      Es un lugar donde puedes aprender, crecer y compartir tu pasión por la lectura.
+                      Te invitamos a formar parte de nuestra comunidad de lectores y descubrir la magia que la biblioteca tiene para ofrecer.
+                      ¡Te esperamos!</p>
+                    <hr class="my-4">
+                    <a class="btn btn-primary btn-lg" href="{% url 'libros' %}" role="button">!conocenos¡</a>
+                </div>
+            </div>
+        </div>
+
+
+        <section>
+           
+        </section>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

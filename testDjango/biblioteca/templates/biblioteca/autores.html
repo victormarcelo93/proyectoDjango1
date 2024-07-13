@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autores</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <div class="inicio" id="principal">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Biblioteca</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'inicio' %}">inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'libros' %}">libros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'autores' %}">autores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'categorias' %}">categorias</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        <div class="row my-4">
+            <div class="col-lg-12">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Nacionalidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Julio Verne</td>
+                            <td>francés</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Oscar Wilde</td>
+                            <td>irlandés</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Karl Ove Knausgård</td>
+                            <td>noruego</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Knut Hamsún</td>
+                            <td>noruego</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>ARTHUR CONAN DOYLE</td>
+                            <td>Reino Unido</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Nikolái V. Gogol</td>
+                            <td>Ukraniano</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>Marcel Proust</td>
+                            <td>francés</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>Mikael Niemi</td>
+                            <td>sueco</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>Alberto Camus</td>
+                            <td>francés</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>Mark Twain</td>
+                            <td>estadounidense</td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+        </div>
+        
+        
+
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

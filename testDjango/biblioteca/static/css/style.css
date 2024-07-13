@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+body {
+    background-color: rgba(201, 204, 46, 0.233);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+      
+    
+}
+
+.containerTitulo {
+    
+    
+    width: 50;
+    height: 50;
+    left: 50;
+    
+}
+
+.container-jumbotron {
+    height: 5%;
+    color:black;
+    
+
+}
+
+.inicio {
+    background-color: rgba(201, 204, 46, 0.233);
+}
+
+.map {
+    filter: grayscale(100%) invert(92%) contrast(93%);
+}
+
+.navbar {
+    background-color: rgba(201, 204, 46, 0.233);
+    color: white;
+    
+
+}
